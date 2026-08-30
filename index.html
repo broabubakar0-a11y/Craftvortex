@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CraftVortex Pro - Ultimate MCPE Hub & Marketplace</title>
+    <title>CraftVortex Pro - Ultimate MCPE Hub</title>
     <style>
         :root {
-            --bg-main: #100b24;
-            --bg-card: #1b1338;
-            --bg-card-hover: #251a4a;
-            --border-clr: #3c2870;
+            --bg-main: #130b2b;
+            --bg-card: #1b123a;
+            --bg-card-hover: #261952;
+            --border-clr: #3b2575;
             --accent-purple: #7b2cbf;
-            --accent-red: #d90429;
+            --accent-red: #e63946;
             --text-main: #ffffff;
             --text-sub: #bfaee0;
         }
         body {
             background-color: var(--bg-main);
             color: var(--text-main);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 10px;
             -webkit-tap-highlight-color: transparent;
@@ -29,11 +29,11 @@
             align-items: center;
             justify-content: space-between;
             background: var(--bg-card);
-            padding: 12px 15px;
+            padding: 10px 14px;
             border-radius: 14px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             border: 1px solid var(--border-clr);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         }
         .menu-btn {
             font-size: 22px;
@@ -44,85 +44,69 @@
         }
         .search-box {
             flex: 1;
-            margin: 0 12px;
-            padding: 10px 18px;
-            background: var(--bg-card-hover);
-            border: 1px solid #523996;
+            margin: 0 10px;
+            padding: 9px 16px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid #53399c;
             border-radius: 25px;
             color: var(--text-main);
             font-size: 14px;
             outline: none;
         }
         .search-box::placeholder {
-            color: #a89bc9;
+            color: #bfaee0;
         }
         .coins-badge {
-            background: var(--bg-card-hover);
-            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 6px 12px;
             border-radius: 20px;
             font-size: 13px;
             color: #ffd700;
             font-weight: bold;
-            border: 1px solid #523996;
+            border: 1px solid #53399c;
             display: flex;
             align-items: center;
             gap: 4px;
             cursor: pointer;
+            text-decoration: none;
         }
         .section-header {
             font-size: 16px;
             font-weight: bold;
-            margin: 22px 0 10px 5px;
+            margin: 18px 0 10px 4px;
             color: var(--text-main);
             display: flex;
             align-items: center;
             justify-content: space-between;
+            cursor: pointer;
         }
         .section-header span {
             font-size: 12px;
             color: var(--text-sub);
-            cursor: pointer;
         }
-        /* Featured Banner Carousel Look */
+
+        /* Banner Carousels */
         .banner {
-            background: linear-gradient(135deg, #1b1338, #4a278f);
+            background: var(--bg-card);
             border-radius: 14px;
             overflow: hidden;
-            border: 1px solid #523996;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-            position: relative;
+            border: 1px solid var(--border-clr);
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
         .banner img {
             width: 100%;
-            height: 175px;
+            height: 160px;
             object-fit: cover;
             display: block;
         }
-        .banner-text {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(16,11,36,0.9), transparent);
-            padding: 15px 12px 10px 12px;
-        }
-        .banner-text h3 {
-            margin: 0;
-            font-size: 16px;
-            color: #fff;
-        }
-        .banner-text p {
-            margin: 3px 0 0 0;
-            font-size: 11px;
-            color: #ffd700;
-        }
-        /* Main Grid Categories */
+
+        /* Category Grid */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 8px;
+            margin-bottom: 8px;
         }
         .cat-card {
             background: var(--bg-card);
@@ -132,31 +116,32 @@
             border: 1px solid var(--border-clr);
             text-decoration: none;
             color: var(--text-main);
-            transition: all 0.2s ease;
+            transition: transform 0.1s;
             cursor: pointer;
+            display: block;
         }
         .cat-card:active {
-            transform: scale(0.95);
-            background: var(--bg-card-hover);
+            transform: scale(0.96);
         }
         .cat-card img {
             width: 100%;
-            height: 85px;
+            height: 75px;
             object-fit: cover;
         }
         .cat-card span {
             display: block;
-            padding: 8px 4px;
-            font-size: 12px;
+            padding: 6px 2px;
+            font-size: 11px;
             font-weight: bold;
             background: #170f30;
         }
-        /* Horizontal Scrollable Themes Tags */
+
+        /* Themes Horizontal Scroll Tags */
         .themes-container {
             display: flex;
             overflow-x: auto;
-            gap: 8px;
-            padding-bottom: 10px;
+            gap: 6px;
+            padding-bottom: 8px;
             scrollbar-width: none;
         }
         .themes-container::-webkit-scrollbar {
@@ -165,102 +150,60 @@
         .theme-tag {
             background: var(--accent-red);
             color: #fff;
-            padding: 8px 16px;
+            padding: 7px 14px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
             white-space: nowrap;
             text-decoration: none;
             cursor: pointer;
             border: none;
-            box-shadow: 0 2px 8px rgba(217, 4, 41, 0.4);
-        }
-        .theme-tag.blue { background: #0077b6; box-shadow: 0 2px 8px rgba(0, 119, 182, 0.4); }
-        .theme-tag.purple { background: var(--accent-purple); box-shadow: 0 2px 8px rgba(123, 44, 191, 0.4); }
-        .theme-tag.orange { background: #fb8500; box-shadow: 0 2px 8px rgba(251, 133, 0, 0.4); }
-        .theme-tag.green { background: #38b000; box-shadow: 0 2px 8px rgba(56, 176, 0, 0.4); }
-        .theme-tag.dark { background: #212529; border: 1px solid #495057; }
-
-        /* Premium Payment Section Card */
-        .premium-box {
-            background: linear-gradient(135deg, #2b1055, #7b2cbf);
-            border-radius: 14px;
-            padding: 18px;
-            margin-bottom: 20px;
-            border: 1px solid #9d4edd;
-            box-shadow: 0 6px 20px rgba(123, 44, 191, 0.4);
-            display: none; /* Shows when clicked on Premium */
-            text-align: center;
-        }
-        .premium-box h2 {
-            margin: 0 0 8px 0;
-            color: #ffd700;
-            font-size: 20px;
-        }
-        .premium-box p {
-            font-size: 13px;
-            color: #f3e8ff;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-        .pay-btn {
-            background: #25d366;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 3px 10px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 2px 6px rgba(230, 57, 70, 0.4);
         }
 
-        /* Massive Item Cards List */
+        /* Item Cards List */
         .item-card {
             background: var(--bg-card);
             border-radius: 14px;
             overflow: hidden;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             border: 1px solid var(--border-clr);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            transition: transform 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         }
         .item-card img {
             width: 100%;
-            height: 195px;
+            height: 180px;
             object-fit: cover;
             display: block;
         }
         .item-info {
-            padding: 14px;
+            padding: 12px;
         }
         .item-info h4 {
-            margin: 0 0 6px 0;
-            font-size: 16px;
+            margin: 0 0 5px 0;
+            font-size: 15px;
             color: #fff;
         }
         .item-desc {
-            margin: 0 0 10px 0;
-            font-size: 12px;
+            margin: 0 0 8px 0;
+            font-size: 11px;
             color: var(--text-sub);
-            line-height: 1.4;
+            line-height: 1.3;
         }
         .item-stats {
             font-size: 11px;
             color: #a89bc9;
             display: flex;
-            gap: 15px;
+            gap: 12px;
             align-items: center;
             border-top: 1px solid #281c52;
-            padding-top: 10px;
+            padding-top: 8px;
         }
         .no-result {
             text-align: center;
-            padding: 40px;
+            padding: 30px;
             color: var(--text-sub);
-            font-size: 14px;
+            font-size: 13px;
             display: none;
             background: var(--bg-card);
             border-radius: 14px;
@@ -268,85 +211,84 @@
         }
         .footer {
             text-align: center;
-            padding: 25px 0;
-            font-size: 12px;
+            padding: 20px 0;
+            font-size: 11px;
             color: #6c757d;
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Bar with Search & Coin Counter -->
+    <!-- Top Bar with Search & Coins -->
     <div class="top-bar">
-        <button class="menu-btn" onclick="alert('CraftVortex Pro Menu Active!')">☰</button>
-        <input type="text" id="searchInput" class="search-box" placeholder="Search skins, maps, shaders, premium..." onkeyup="searchItems()">
-        <div class="coins-badge" onclick="showPremiumSection()"><span>25</span> 🪙</div>
+        <button class="menu-btn" onclick="alert('CraftVortex Pro Menu')">☰</button>
+        <input type="text" id="searchInput" class="search-box" placeholder="Search maps, skins, addons..." onkeyup="searchItems()">
+        <a href="https://wa.me/?text=Hello%2C%20I%20want%20to%20buy%20CraftVortex%20VIP%20Coins." target="_blank" class="coins-badge"><span>15</span> 🪙</a>
     </div>
 
-    <!-- Featured Banner of the Day -->
-    <div class="section-header">Content of the day <span>Trending 🔥</span></div>
-    <div class="banner">
-        <img src="https://images.minecraftings.com/wp-content/uploads/minecraft-pe-shaders-1.jpg" alt="Featured Minecraft Shaders">
-        <div class="banner-text">
-            <h3>Ultra Realistic RTX Shaders v12</h3>
-            <p>⭐ 4.9 Rating • 500K+ Downloads</p>
+    <!-- Best Content Slider Banner -->
+    <div class="section-header" onclick="toggleSection('bestContentSection')">Best content <span>▲</span></div>
+    <div id="bestContentSection" class="banner">
+        <img src="https://mcpedl.com/wp-content/uploads/2021/04/military-skins-pack-thumb.jpg" alt="Best Content">
+    </div>
+
+    <!-- Content of the day Banner -->
+    <div class="section-header" onclick="toggleSection('dayContentSection')">Content of the day <span>▲</span></div>
+    <div id="dayContentSection" class="banner">
+        <img src="https://images.minecraftings.com/wp-content/uploads/minecraft-pe-shaders-1.jpg" alt="Content of the day">
+    </div>
+
+    <!-- Categories Grid -->
+    <div class="section-header" onclick="toggleSection('categorySection')">Category <span>▲</span></div>
+    <div id="categorySection">
+        <div class="grid-3">
+            <div onclick="filterCategory('new')" class="cat-card">
+                <img src="https://mcpedl.com/wp-content/uploads/2022/03/modern-house-map-thumb.jpg" alt="New">
+                <span>New</span>
+            </div>
+            <!-- Direct WhatsApp Payment Link on Premium Click -->
+            <a href="https://wa.me/?text=Hello%2C%20I%20want%20to%20buy%20CraftVortex%20VIP%20Premium%20Pass%20for%20400%20PKR.%20Here%20is%20my%20payment%20proof." target="_blank" class="cat-card">
+                <img src="https://mcpedl.com/wp-content/uploads/2021/11/castle-map-thumb.jpg" alt="Premium">
+                <span style="color: #ffd700;">Premium</span>
+            </a>
+            <div onclick="filterCategory('maps')" class="cat-card">
+                <img src="https://ucarecdn.com/f9c9b47e-8c4d-4089-9a6d-e4c02f1a6b0c/-/preview/500x500/" alt="Maps">
+                <span>Maps</span>
+            </div>
+        </div>
+        <div class="grid-3">
+            <div onclick="filterCategory('addons')" class="cat-card">
+                <img src="https://images.minecraftings.com/wp-content/uploads/dragon-mounts-addon-mcpe.jpg" alt="Addons">
+                <span>Addons</span>
+            </div>
+            <div onclick="filterCategory('skins')" class="cat-card">
+                <img src="https://mcpedl.com/wp-content/uploads/2021/06/skins-banner.jpg" alt="Skins">
+                <span>Skins</span>
+            </div>
+            <div onclick="filterCategory('buildings')" class="cat-card">
+                <img src="https://mcpedl.com/wp-content/uploads/2022/03/modern-house-map-thumb.jpg" alt="Buildings">
+                <span>Buildings</span>
+            </div>
         </div>
     </div>
 
-    <!-- Interactive Premium Purchase Section Box -->
-    <div id="premiumSection" class="premium-box">
-        <h2>👑 CraftVortex VIP Premium Pass</h2>
-        <p>Unlock unlimited fast downloads, exclusive custom skins, locked PvP maps, and ad-free experience for only <b>400 PKR</b>!</p>
-        <a href="https://wa.me/?text=Hello%2C%20I%20want%20to%20buy%20CraftVortex%20VIP%20Premium%20Pass%20for%20400%20PKR.%20Here%20is%20my%20payment%20proof." target="_blank" class="pay-btn">💬 Pay & Buy via WhatsApp (400 PKR)</a>
+    <!-- Themes Tags Scrollbar -->
+    <div class="section-header" onclick="toggleSection('themesSection')">Themes <span>▲</span></div>
+    <div id="themesSection" class="themes-container">
+        <button class="theme-tag" onclick="filterTheme('skyblock')">Skyblock</button>
+        <button class="theme-tag" onclick="filterTheme('dinosaurs')">Dinosaurs</button>
+        <button class="theme-tag" onclick="filterTheme('huggy wuggy')">Huggy Wuggy</button>
+        <button class="theme-tag" onclick="filterTheme('scp')">SCP</button>
+        <button class="theme-tag" onclick="filterTheme('bedwars')">Bedwars</button>
+        <button class="theme-tag" onclick="filterTheme('fnaf')">FNAF</button>
+        <button class="theme-tag" onclick="filterTheme('guns')">Guns</button>
+        <button class="theme-tag" onclick="filterTheme('horror')">Horror</button>
+        <button class="theme-tag" onclick="filterTheme('zombies')">Zombies</button>
+        <button class="theme-tag" onclick="filterTheme('monsters')">Monsters</button>
     </div>
 
-    <!-- Main Categories Grid -->
-    <div class="section-header">Categories <span>Explore All</span></div>
-    <div class="grid-3">
-        <a href="#" onclick="filterCategory('maps')" class="cat-card">
-            <img src="https://ucarecdn.com/f9c9b47e-8c4d-4089-9a6d-e4c02f1a6b0c/-/preview/500x500/" alt="Maps">
-            <span>Maps</span>
-        </a>
-        <a href="#" onclick="filterCategory('addons')" class="cat-card">
-            <img src="https://images.minecraftings.com/wp-content/uploads/dragon-mounts-addon-mcpe.jpg" alt="Addons">
-            <span>Addons</span>
-        </a>
-        <a href="#" onclick="filterCategory('skins')" class="cat-card">
-            <img src="https://mcpedl.com/wp-content/uploads/2021/06/skins-banner.jpg" alt="Skins">
-            <span>Skins</span>
-        </a>
-    </div>
-    <div class="grid-3">
-        <a href="#" onclick="filterCategory('buildings')" class="cat-card">
-            <img src="https://mcpedl.com/wp-content/uploads/2022/03/modern-house-map-thumb.jpg" alt="Buildings">
-            <span>Buildings</span>
-        </a>
-        <a href="#" onclick="filterCategory('textures')" class="cat-card">
-            <img src="https://mcpedl.com/wp-content/uploads/2020/07/faithful-texture-pack-thumb.jpg" alt="Textures">
-            <span>Textures</span>
-        </a>
-        <div onclick="showPremiumSection()" class="cat-card">
-            <img src="https://mcpedl.com/wp-content/uploads/2021/11/castle-map-thumb.jpg" alt="Premium">
-            <span>⭐ Premium</span>
-        </div>
-    </div>
-
-    <!-- Advanced Themes & Tags Scrollbar -->
-    <div class="section-header">Popular Themes <span>Filter Quick</span></div>
-    <div class="themes-container">
-        <button class="theme-tag" onclick="filterTheme('military')">Military & Army</button>
-        <button class="theme-tag blue" onclick="filterTheme('monster')">Monsters & Mutants</button>
-        <button class="theme-tag purple" onclick="filterTheme('waifus')">Anime Waifus</button>
-        <button class="theme-tag orange" onclick="filterTheme('pvp')">PVP & Bedwars</button>
-        <button class="theme-tag green" onclick="filterTheme('skyblock')">Skyblock Islands</button>
-        <button class="theme-tag dark" onclick="filterTheme('horror')">Horror & FNAF</button>
-        <button class="theme-tag blue" onclick="filterTheme('dinosaur')">Jurassic Dinosaurs</button>
-        <button class="theme-tag purple" onclick="filterTheme('scp')">SCP Containment</button>
-        <button class="theme-tag orange" onclick="filterTheme('premium')">VIP Premium</button>
-    </div>
-
-    <!-- Massive Database Container (All Items) -->
-    <div class="section-header" style="margin-top:25px;">Explore All Items Database <span>Live Database</span></div>
+    <!-- Items Database Container -->
+    <div class="section-header" style="margin-top:20px;">Explore All Items Database <span>Live</span></div>
 
     <div id="itemList">
         <!-- Item 1 -->
@@ -354,8 +296,8 @@
             <img src="https://mcpedl.com/wp-content/uploads/2021/04/military-skins-pack-thumb.jpg" alt="Military">
             <div class="item-info">
                 <h4>Military Strike Force Skins Pack</h4>
-                <p class="item-desc">Equip tactical gear, camouflage uniforms, and elite army soldier skins for multiplayer servers.</p>
-                <div class="item-stats"><span>📎 45.2 Mb</span><span>📥 152.2K</span><span>❤️ 11.0K</span><span>🎨 Skins</span></div>
+                <p class="item-desc">Equip tactical gear, camouflage uniforms, and elite army soldier skins.</p>
+                <div class="item-stats"><span>📎 45.2 Mb</span><span>📥 152K</span><span>❤️ 11K</span><span>🎨 Skins</span></div>
             </div>
         </div>
 
@@ -364,8 +306,8 @@
             <img src="https://mcpedl.com/wp-content/uploads/2022/01/monster-skins-thumb.jpg" alt="Monsters">
             <div class="item-info">
                 <h4>Monster Girls & Suited Creeper Skins</h4>
-                <p class="item-desc">Unique monster transformations, enderman hoodies, and custom stylized creature outfits.</p>
-                <div class="item-stats"><span>📎 32.8 Mb</span><span>📥 198.1K</span><span>❤️ 18.9K</span><span>🎨 Skins</span></div>
+                <p class="item-desc">Unique monster transformations and custom stylized creature outfits.</p>
+                <div class="item-stats"><span>📎 32.8 Mb</span><span>📥 198K</span><span>❤️ 18K</span><span>🎨 Skins</span></div>
             </div>
         </div>
 
@@ -374,8 +316,8 @@
             <img src="https://mcpedl.com/wp-content/uploads/2020/10/horror-map-thumb.jpg" alt="Horror">
             <div class="item-info">
                 <h4>Minecraft: Phasmophobia Horror Map</h4>
-                <p class="item-desc">Investigate haunted locations with EMF readers, flashlight beams, and terrifying ghost encounters.</p>
-                <div class="item-stats"><span>📎 140.5 Mb</span><span>📥 39.5K</span><span>❤️ 2.8K</span><span>🗺️ Maps</span></div>
+                <p class="item-desc">Investigate haunted locations with EMF readers and flashlights.</p>
+                <div class="item-stats"><span>📎 140 Mb</span><span>📥 39K</span><span>❤️ 2.8K</span><span>🗺️ Maps</span></div>
             </div>
         </div>
 
@@ -384,114 +326,39 @@
             <img src="https://mcpedl.com/wp-content/uploads/2021/08/halo-addon-thumb.jpg" alt="Halo Addon">
             <div class="item-info">
                 <h4>Halo Addon & Futuristic Gun Weapons</h4>
-                <p class="item-desc">Master energy swords, plasma rifles, and futuristic armor sets built specifically for fierce combat.</p>
-                <div class="item-stats"><span>📎 89.0 Mb</span><span>📥 64.3K</span><span>❤️ 9.1K</span><span>🧩 Addons</span></div>
+                <p class="item-desc">Master energy swords, plasma rifles, and futuristic armor sets.</p>
+                <div class="item-stats"><span>📎 89 Mb</span><span>📥 64K</span><span>❤️ 9K</span><span>🧩 Addons</span></div>
             </div>
         </div>
 
         <!-- Item 5 -->
-        <div class="item-card" data-name="anime waifus and kawaii school girls skin pack">
-            <img src="https://mcpedl.com/wp-content/uploads/2021/05/anime-skins-thumb.jpg" alt="Anime">
-            <div class="item-info">
-                <h4>Anime Waifus & Kawaii School Skins</h4>
-                <p class="item-desc">Stunning high-definition anime character skins with vibrant hair styles and clothing options.</p>
-                <div class="item-stats"><span>📎 58.4 Mb</span><span>📥 120.4K</span><span>❤️ 14.5K</span><span>🎨 Skins</span></div>
-            </div>
-        </div>
-
-        <!-- Item 6 -->
-        <div class="item-card" data-name="bedwars ultimate pvp map arenas multiplayer">
-            <img src="https://mcpedl.com/wp-content/uploads/2020/05/bedwars-map-thumb.jpg" alt="Bedwars">
-            <div class="item-info">
-                <h4>Bedwars Ultimate PVP Arena Map</h4>
-                <p class="item-desc">Defend your bed, collect iron generators, and rush opposing islands in optimized mini-game arenas.</p>
-                <div class="item-stats"><span>📎 95.1 Mb</span><span>📥 88.0K</span><span>❤️ 7.2K</span><span>🗺️ Maps</span></div>
-            </div>
-        </div>
-
-        <!-- Item 7 -->
         <div class="item-card" data-name="skyblock hardcore survival island map challenges">
             <img src="https://mcpedl.com/wp-content/uploads/2019/12/skyblock-map-thumb.jpg" alt="Skyblock">
             <div class="item-info">
                 <h4>Skyblock Hardcore Island Challenge</h4>
-                <p class="item-desc">Classic single-tree survival experience packed with custom achievements and expanded floating islands.</p>
-                <div class="item-stats"><span>📎 22.0 Mb</span><span>📥 210.5K</span><span>❤️ 25.0K</span><span>🗺️ Maps</span></div>
-            </div>
-        </div>
-
-        <!-- Item 8 -->
-        <div class="item-card" data-name="scp containment breach facility horror map laboratory">
-            <img src="https://mcpedl.com/wp-content/uploads/2021/02/scp-map-thumb.jpg" alt="SCP">
-            <div class="item-info">
-                <h4>SCP Containment Facility Map & Addon</h4>
-                <p class="item-desc">Explore deep underground security bunkers containing anomalous entities and dangerous biohazards.</p>
-                <div class="item-stats"><span>📎 160.2 Mb</span><span>📥 45.1K</span><span>❤️ 6.3K</span><span>🗺️ Maps</span></div>
-            </div>
-        </div>
-
-        <!-- Item 9 -->
-        <div class="item-card" data-name="jurassic dinosaur park addon t-rex raptor fossils">
-            <img src="https://images.minecraftings.com/wp-content/uploads/dragon-mounts-addon-mcpe.jpg" alt="Dinosaurs">
-            <div class="item-info">
-                <h4>Jurassic Dinosaur Park & Fossils Addon</h4>
-                <p class="item-desc">Hatch prehistoric eggs, tame terrifying Tyrannosaurus Rex beasts, and explore ancient biomes.</p>
-                <div class="item-stats"><span>📎 112.4 Mb</span><span>📥 76.9K</span><span>❤️ 10.4K</span><span>🧩 Addons</span></div>
-            </div>
-        </div>
-
-        <!-- Item 10 -->
-        <div class="item-card" data-name="modern luxury mansion house building architecture map">
-            <img src="https://mcpedl.com/wp-content/uploads/2022/03/modern-house-map-thumb.jpg" alt="Buildings">
-            <div class="item-info">
-                <h4>Modern Luxury Mansion & Redstone House</h4>
-                <p class="item-desc">Fully furnished automated smart house featuring secret vaults, working elevators, and parking garages.</p>
-                <div class="item-stats"><span>📎 78.3 Mb</span><span>📥 134.0K</span><span>❤️ 16.2K</span><span>🏗️ Buildings</span></div>
-            </div>
-        </div>
-
-        <!-- Item 11 -->
-        <div class="item-card" data-name="faithful texture pack 64x resolution overhaul">
-            <img src="https://mcpedl.com/wp-content/uploads/2020/07/faithful-texture-pack-thumb.jpg" alt="Textures">
-            <div class="item-info">
-                <h4>Faithful HD 64x Texture Pack Overhaul</h4>
-                <p class="item-desc">Enhances standard blocks and items with crystal clear high resolution textures while keeping vanilla style.</p>
-                <div class="item-stats"><span>📎 44.0 Mb</span><span>📥 310.2K</span><span>❤️ 42.1K</span><span>📦 Textures</span></div>
-            </div>
-        </div>
-
-        <!-- Item 12 -->
-        <div class="item-card" data-name="supercars and sports vehicles racing cars addon premium">
-            <img src="https://mcpedl.com/wp-content/uploads/2021/11/castle-map-thumb.jpg" alt="Vehicles">
-            <div class="item-info">
-                <h4>VIP Supercars & Sports Vehicles Racing Addon</h4>
-                <p class="item-desc">Drive high-speed functional sports cars, custom color paint jobs, and customized race tracks.</p>
-                <div class="item-stats"><span>📎 67.5 Mb</span><span>📥 92.8K</span><span>❤️ 11.9K</span><span>⭐ Premium</span></div>
+                <p class="item-desc">Classic single-tree survival experience packed with custom achievements.</p>
+                <div class="item-stats"><span>📎 22 Mb</span><span>📥 210K</span><span>❤️ 25K</span><span>🗺️ Maps</span></div>
             </div>
         </div>
     </div>
 
-    <!-- Hidden state message if nothing matches search -->
+    <!-- No Result Box -->
     <div id="noResult" class="no-result">
         <h3>No matching items found!</h3>
-        <p>Try searching with another keyword like 'maps', 'skins', 'pvp', or 'premium'.</p>
+        <p>Try searching with another keyword like 'skins', 'maps', or 'horror'.</p>
     </div>
 
     <div class="footer">
-        CraftVortex Pro Hub &copy; 2026 • Optimized for MCPE & Bedrock Edition
+        CraftVortex Pro Hub &copy; 2026
     </div>
 
-    <!-- JavaScript Engine for Search & Dynamic Filters -->
+    <!-- JavaScript Engine -->
     <script>
         function searchItems() {
             let input = document.getElementById('searchInput').value.toLowerCase().trim();
             let cards = document.getElementsByClassName('item-card');
             let noResult = document.getElementById('noResult');
             let visibleCount = 0;
-
-            // If searching for premium, show payment box too
-            if(input.includes('premium')) {
-                document.getElementById('premiumSection').style.display = "block";
-            }
 
             for (let i = 0; i < cards.length; i++) {
                 let name = cards[i].getAttribute('data-name');
@@ -503,7 +370,7 @@
                 }
             }
 
-            if (visibleCount === 0 && !input.includes('premium')) {
+            if (visibleCount === 0) {
                 noResult.style.display = "block";
             } else {
                 noResult.style.display = "none";
@@ -513,25 +380,23 @@
         function filterTheme(themeName) {
             document.getElementById('searchInput').value = themeName;
             searchItems();
-            window.scrollTo({ top: 250, behavior: 'smooth' });
+            window.scrollTo({ top: 300, behavior: 'smooth' });
         }
 
         function filterCategory(catName) {
             document.getElementById('searchInput').value = catName;
             searchItems();
-            window.scrollTo({ top: 250, behavior: 'smooth' });
+            window.scrollTo({ top: 300, behavior: 'smooth' });
         }
 
-        function showPremiumSection() {
-            let box = document.getElementById('premiumSection');
-            if (box.style.display === "block") {
-                box.style.display = "none";
+        function toggleSection(sectionId) {
+            let sec = document.getElementById(sectionId);
+            if (sec.style.display === "none") {
+                sec.style.display = "block";
             } else {
-                box.style.display = "block";
-                window.scrollTo({ top: 150, behavior: 'smooth' });
+                sec.style.display = "none";
             }
         }
     </script>
-
 </body>
 </html>
