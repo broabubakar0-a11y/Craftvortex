@@ -1,17 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CraftVortex - Minecraft Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftVortex - Minecraft Skins & Packs</title>
     <style>
-        body { background-color: #121212; color: white; font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #00ffcc; }
-        p { font-size: 18px; color: #cccccc; }
-        .btn { background-color: #00ffcc; color: black; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; margin-top: 20px; }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #00ffcc;
+        }
+        .btn {
+            background-color: #00ffcc;
+            color: #000000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 8px;
+            width: 200px;
+            border: 1px solid #00ffcc;
+        }
     </style>
 </head>
 <body>
+
     <h1>Welcome to CraftVortex</h1>
     <p>Yahan aapko milengi sabse best Minecraft Skins aur Custom Packs!</p>
-    <a class="btn" href="#">Contact / Buy Now</a>
+    
+    <a href="https://wa.me/" class="btn">Contact / Buy Now</a>
+
+    <div class="container">
+        <!-- Item 1 -->
+        <div class="card">
+            <h3>Creeper Pack</h3>
+            <p style="font-size: 14px; color: #ccc;">Best HD Texture Pack for Bedrock</p>
+            <a href="https://wa.me/" class="btn" style="padding: 6px 12px; font-size: 14px;">Download / Buy</a>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="card">
+            <h3>Legendary Skin</h3>
+            <p style="font-size: 14px; color: #ccc;">Custom Player Skin Design</p>
+            <a href="https://wa.me/" class="btn" style="padding: 6px 12px; font-size: 14px;">Download / Buy</a>
+        </div>
+    </div>
+
 </body>
 </html>
