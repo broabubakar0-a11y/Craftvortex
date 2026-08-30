@@ -3,42 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CraftVortex - Minecraft Hub</title>
+    <title>CraftVortex - MCPE Hub</title>
     <style>
-        body { background-color: #121212; color: #fff; font-family: Arial, sans-serif; padding: 15px; text-align: center; }
-        h1 { color: #00ffcc; }
-        .box { background: #ff9900; color: #000; padding: 15px; border-radius: 8px; margin: 15px auto; max-width: 400px; font-weight: bold; }
-        .card { background: #1a1a1a; padding: 12px; border-radius: 8px; margin: 10px auto; max-width: 400px; border: 1px solid #333; }
-        .btn { background: #00ffcc; color: #000; padding: 8px 15px; text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-block; margin-top: 8px; }
+        body {
+            background-color: #161032;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+        /* Top Bar & Search */
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #231942;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .search-box {
+            flex: 1;
+            margin: 0 10px;
+            padding: 8px 12px;
+            background: #352565;
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+        }
+        .coins {
+            background: #352565;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 13px;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        /* Section Titles */
+        .section-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin: 15px 0 8px 5px;
+            color: #fff;
+        }
+        /* Banner Card */
+        .banner {
+            background: linear-gradient(135deg, #231942, #482980);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #4a3380;
+            margin-bottom: 20px;
+        }
+        .banner img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+        }
+        /* Categories Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .cat-card {
+            background: #231942;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid #3d2a70;
+            text-decoration: none;
+            color: #fff;
+        }
+        .cat-card img {
+            width: 100%;
+            height: 75px;
+            object-fit: cover;
+        }
+        .cat-card span {
+            display: block;
+            padding: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            background: #32215c;
+        }
     </style>
 </head>
 <body>
 
-    <h1>CraftVortex</h1>
-    <p>Duniya ke sare Minecraft Worlds aur Skins!</p>
-
-    <div class="box">
-        ⭐ VIP FIRST PREMIUM ACCESS ⭐<br>
-        Price: 400 PKR<br>
-        <a href="https://wa.me/" class="btn" style="background:#000; color:#ffcc00;">Buy Now</a>
+    <!-- Top Bar with Search & Coins -->
+    <div class="top-bar">
+        <span style="font-size: 18px; cursor: pointer;">☰</span>
+        <input type="text" class="search-box" placeholder="Search">
+        <div class="coins">15 🪙</div>
     </div>
 
-    <div class="card">
-        <h3>Minecraft Worlds (Mars, Godzilla, One Block)</h3>
-        <p>Sare adventure aur space maps.</p>
-        <a href="https://wa.me/" class="btn">Get Worlds</a>
+    <!-- Content of the day -->
+    <div class="section-title">Content of the day ∧</div>
+    <div class="banner">
+        <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&auto=format&fit=crop&q=60" alt="Banner">
     </div>
 
-    <div class="card">
-        <h3>Minecraft Skins (Girls, Boys, Heroes)</h3>
-        <p>Duniya ki sari HD skins.</p>
-        <a href="https://wa.me/" class="btn">Get Skins</a>
+    <!-- Category Section -->
+    <div class="section-title">Category ∧</div>
+    
+    <div class="grid-2">
+        <a href="#" class="cat-card">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300&auto=format&fit=crop&q=60" alt="New">
+            <span>New</span>
+        </a>
+        <a href="#" class="cat-card">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=300&auto=format&fit=crop&q=60" alt="Premium">
+            <span>Premium (400 PKR)</span>
+        </a>
     </div>
 
-    <div class="card">
-        <h3>Addons & Tech (Ben 10, CCTV, AC, PS5)</h3>
-        <p>Furniture, weapons aur vehicles.</p>
-        <a href="https://wa.me/" class="btn">Get Addons</a>
+    <div class="grid-2">
+        <a href="#" class="cat-card">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&auto=format&fit=crop&q=60" alt="Maps">
+            <span>Maps</span>
+        </a>
+        <a href="#" class="cat-card">
+            <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=300&auto=format&fit=crop&q=60" alt="Addons">
+            <span>Addons</span>
+        </a>
     </div>
 
 </body>
